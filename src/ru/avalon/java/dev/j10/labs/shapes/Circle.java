@@ -8,11 +8,40 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%80%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Окружность</a>
  */
-public class Circle {
-
+public class Circle implements Shape, Ellipse{
+    
+    private float radius;
+    
+    public Circle (float radius) {
+        this.radius = radius;
+    }
+    
+    @Override
+    public float getArea(){        
+        float s = (float) Math.PI * (this.radius * this.radius);        
+        return s;
+    }
+    
+    @Override
+    public float getLength(){
+        float l = (float) (2 * Math.PI) * this.radius;
+        return l;    
+    }
+    
+    @Override
+    public String toString() {
+        return "The area of CIRCLE is = " + String.format("%.2f", getArea()) + "\n" +
+                "The length of CIRCLE is = " + String.format("%.2f", getLength());
+    }
+    
+    
+    public String getName(){
+        return "circle";
+    }
     /*
      * TODO: Реализовать класс 'Circle'
      * 1. Используйте наследование.
      * 2. Реализуйте все абстрактные методы.
      */
+    
 }
