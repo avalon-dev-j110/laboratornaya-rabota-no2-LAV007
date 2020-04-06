@@ -17,7 +17,7 @@ public interface Shape {
     /*
      * TODO: Закончить определение интерфейса 'Shape'
      *
-     * 1. Включите интерфейс в общую систему типов.
+     * +1. Включите интерфейс в общую систему типов.
      *
      * 2. При необходимости, дополните структуру интерфеса.
      */
@@ -36,5 +36,11 @@ public interface Shape {
      * @see <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C_%D1%84%D0%B8%D0%B3%D1%83%D1%80%D1%8B">Площадь фигуры</a>
      */
     float getArea();
+    
+    /**
+     * Method returns the name of maximum figure
+     * @return 
+     */
+    String getName();
 
 }
