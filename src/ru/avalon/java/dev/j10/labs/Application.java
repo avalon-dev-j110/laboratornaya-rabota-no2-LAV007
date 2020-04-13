@@ -26,8 +26,10 @@ public class Application {
         }
            for (int i = 0; i < shapes.length; i++) System.out.println(shapes[i] + "\n");
            
+           System.out.println("--------------------" + "\n" + "The biggest shape is:" + "\n" +
+                              "--------------------" + "\n" + findMaxArea(shapes).toString() + "\n" +
+                              "-----------------------------------");
            
-                      
         /*
          * TODO: Выполнить действия над массивом 'shapes'
          *
@@ -42,15 +44,15 @@ public class Application {
          */        
     } 
     
-    public static String findMaxArea(Shape[] shapes){
-            float max = 0;
-            String name = null;
+    public static Shape findMaxArea(Shape[] shapes){
+            Shape maxS = null;
+            float max = 0;            
             for(int i = 0; i < shapes.length; i++){
                 if(max < shapes[i].getArea()){
                     max = shapes[i].getArea();
-                    name = shapes[i].getName();
+                    maxS = shapes[i];                    
+                }
             }
-        }
-        return "The maximum area is " + name + "'s area with result is " + String.format("%.2f", max);
+            return maxS;
         }
 }
